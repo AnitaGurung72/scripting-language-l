@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h4>red</h4>
+    <div class="green">
+      Green
+    </div>
+    <div class="blue">
+      blue
+    </div>
+    <div id="yellow">
+      yellow
+    </div>
+    <div class="teal">
+      teal1
+    </div>
+    <div class="teal">
+      teal2
+    </div>
+    <script>
+    const red = document.getElementsByTagName("h4");
+    const green = document.getElementsByTagName("green");
+    const blue = document.getElementsByClassName("blue");
+    const yellow = document.querySelector("#yellow");
+    const teal = document.querySelectorAll(".teal")
+    
+    console.log(red);
+    console.log(green);
+    console.log(blue);
+    console.log(yellow);
+    </script>
+  </body>
+</html>
