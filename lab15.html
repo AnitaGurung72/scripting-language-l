@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Filtering</title>
+    
+</head>
+<body>
+
+    
+    <div>
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter" onchange="filterItems()">
+           
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+           
+        </select>
+
+        <label for="priceRangeFilter">Price Range:</label>
+        <input type="range" id="priceRangeFilter" min="0" max="1000" onchange="filterItems()">
+    </div>
+
+   
+    <ul id="itemList">
+       
+    </ul>
+
+    
+</html>
