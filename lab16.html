@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Validation</title>
+</head>
+<body>
+    <form name="registrationForm" onsubmit="return validateForm()">
+        Email: <input type="text" name="email"><br>
+        Age: <input type="text" name="age"><br>
+        Password: <input type="password" name="password"><br>
+        Confirm Password: <input type="password" name="confirmPassword"><br>
+        Zip Code: <input type="text" name="zipCode"><br>
+        <input type="checkbox" name="terms"> I agree to the terms and conditions<br>
+        URL: <input type="text" name="url"><br>
+        Date: <input type="date" name="date"><br>
+        File: <input type="file" name="file"><br>
+        Country: <select name="country">
+            <option value="">Select a country</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="Nep">Nepal</option>
+        </select><br>
+        <input type="submit" value="Register">
+    </form>
+    <script src="lab16j.js"></script>
+</body>
+</html>
