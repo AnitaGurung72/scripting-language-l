@@ -1,26 +1,31 @@
 <?php
+
 $servername="localhost";
 $username="root";
 $password="";
 $database="basicform";
-$conn=mysqli_connect($servername,$username,$password,$database);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-};
+
+$conn = new mysqli($servername,$username,$password,$database);
+
+if($conn){
+    echo 'Database Connection Success<br>';
+}
+else{
+    die($conn);
+}
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-$sql = "INSERT INTO feedback (name, email, message) VALUES (?, ?, ?)";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $name, $email, $message);
+$sql = "INSERT INTO lab17c (name, email, message) VALUES ('$name','$email','$message')";
 
-if ($stmt->execute()) {
-    echo "Feedback submitted successfully!";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+if($conn->query($sql)){
+    echo "Data entered successfully";
+}
+else{
+    echo $conn->error;
 }
 
-$stmt->close();
 $conn->close();
 ?>
