@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show/Hide Div with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="showButton">Show Div</button>
+    <button id="hideButton">Hide Div</button>
+
+    <div id="targetDiv" style="display: none;">
+        This is the div we want to show/hide.
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#showButton').click(function() {
+                $('#targetDiv').show();
+            });
+
+            $('#hideButton').click(function() {
+                $('#targetDiv').hide();
+            });
+        });
+    </script>
+</body>
+</html>
